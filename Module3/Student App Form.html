@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Application Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4f46e5;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            color: #4f46e5;
+            border-bottom: 2px solid #4f46e5;
+            padding-bottom: 8px;
+            margin: 25px 0 20px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+            color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #4f46e5;
+        }
+
+        textarea {
+            height: 90px;
+            resize: none;
+        }
+
+        .gender {
+            display: flex;
+            gap: 20px;
+            margin-top: 8px;
+        }
+
+        .gender label {
+            font-weight: normal;
+        }
+
+        .gender input {
+            width: auto;
+        }
+
+        .terms {
+            margin: 20px 0;
+        }
+
+        .terms input {
+            width: auto;
+            margin-right: 8px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #3730a3;
+        }
+
+        #message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            text-align: center;
+            background: #d1fae5;
+            color: #065f46;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Application Form</h1>
+
+        <p class="subtitle">
+            Please fill in the details below
+        </p>
+
+        <form id="studentForm">
+
+            <h2 class="section-title">Personal Information</h2>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" id="fname"
+                           placeholder="Enter first name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" id="lname"
+                           placeholder="Enter last name" required>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label>Date of Birth</label>
+                    <input type="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel"
+                           placeholder="Enter phone number"
+                           pattern="[0-9]{10}"
+                           required>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Email</label>
+
+                <input type="email"
+                       placeholder="Enter email address"
+                       required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Gender</label>
+
+                <div class="gender">
+
+                    <label>
+                        <input type="radio"
+                               name="gender"
+                               value="Male"
+                               required>
+                        Male
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               name="gender"
+                               value="Female">
+                        Female
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               name="gender"
+                               value="Other">
+                        Other
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <h2 class="section-title">Academic Information</h2>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Course</label>
+
+                    <select required>
+
+                        <option value="">
+                            Select Course
+                        </option>
+
+                        <option>B.Tech</option>
+                        <option>B.E</option>
+                        <option>B.Sc</option>
+                        <option>BCA</option>
+                        <option>MCA</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Department</label>
+
+                    <select required>
+
+                        <option value="">
+                            Select Department
+                        </option>
+
+                        <option>Information Technology</option>
+                        <option>Computer Science</option>
+                        <option>Artificial Intelligence</option>
+                        <option>Electronics</option>
+                        <option>Mechanical</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>12th / Diploma Percentage</label>
+
+                    <input type="number"
+                           min="0"
+                           max="100"
+                           step="0.01"
+                           placeholder="Enter percentage"
+                           required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Previous School / College</label>
+
+                    <input type="text"
+                           placeholder="Enter institution name"
+                           required>
+
+                </div>
+
+            </div>
+
+
+            <h2 class="section-title">Address</h2>
+
+            <div class="form-group">
+
+                <label>Address</label>
+
+                <textarea
+                    placeholder="Enter your complete address"
+                    required></textarea>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>City</label>
+
+                    <input type="text"
+                           placeholder="Enter city"
+                           required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>PIN Code</label>
+
+                    <input type="text"
+                           placeholder="Enter PIN code"
+                           pattern="[0-9]{6}"
+                           required>
+
+                </div>
+
+            </div>
+
+
+            <h2 class="section-title">Documents</h2>
+
+            <div class="form-group">
+
+                <label>Upload Student Photo</label>
+
+                <input type="file"
+                       accept="image/*"
+                       required>
+
+            </div>
+
+
+            <div class="terms">
+
+                <label>
+                    <input type="checkbox" required>
+                    I confirm that all the information provided
+                    is correct.
+                </label>
+
+            </div>
+
+            <button type="submit">
+                Submit Application
+            </button>
+
+            <div id="message">
+                ✅ Application submitted successfully!
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <script>
+
+        document.getElementById("studentForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let firstName = document.getElementById("fname").value;
+            let lastName = document.getElementById("lname").value;
+
+            document.getElementById("message").style.display = "block";
+
+            alert(
+                "Application Submitted Successfully!\n\n" +
+                "Student Name: " + firstName + " " + lastName
+            );
+
+        });
+
+    </script>
+
+</body>
+
+</html>
+```
