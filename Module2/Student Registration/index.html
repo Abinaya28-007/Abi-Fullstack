@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+    </div>
+
+    <div class="glass-container">
+
+        <div class="heading">
+            <h1>Student Registration</h1>
+            <p>Create your student account</p>
+        </div>
+
+        <form id="studentForm">
+
+            <div class="row">
+
+                <div class="input-group">
+                    <label>First Name</label>
+                    <input type="text" id="fname" placeholder="Enter first name">
+                </div>
+
+                <div class="input-group">
+                    <label>Last Name</label>
+                    <input type="text" id="lname" placeholder="Enter last name">
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="student@email.com">
+                </div>
+
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="text" id="phone" placeholder="Enter phone number">
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="input-group">
+                    <label>Date of Birth</label>
+                    <input type="date" id="dob">
+                </div>
+
+                <div class="input-group">
+                    <label>Gender</label>
+
+                    <div class="gender-box">
+                        <label>
+                            <input type="radio" name="gender" value="Male">
+                            Male
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" value="Female">
+                            Female
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" value="Other">
+                            Other
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="input-group">
+                    <label>Course</label>
+
+                    <select id="course">
+                        <option value="">Select Course</option>
+                        <option>B.Tech</option>
+                        <option>B.Sc</option>
+                        <option>BCA</option>
+                        <option>MCA</option>
+                        <option>MBA</option>
+                    </select>
+
+                </div>
+
+                <div class="input-group">
+                    <label>Department</label>
+
+                    <select id="department">
+                        <option value="">Select Department</option>
+                        <option>Information Technology</option>
+                        <option>Computer Science</option>
+                        <option>Electronics</option>
+                        <option>Mechanical</option>
+                        <option>Civil</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="input-group">
+                <label>Address</label>
+                <textarea id="address" placeholder="Enter your address"></textarea>
+            </div>
+
+            <div class="row">
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="Enter password">
+                </div>
+
+                <div class="input-group">
+                    <label>Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm password">
+                </div>
+
+            </div>
+
+            <div class="terms">
+                <input type="checkbox" id="terms">
+                <span>I agree to the terms and conditions</span>
+            </div>
+
+            <button type="submit">Create Account</button>
+
+            <button type="reset" id="reset" class="reset-btn">
+                Reset
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </div>
+
+</body>
+</html>

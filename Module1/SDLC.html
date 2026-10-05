@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI SDLC Generator</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #E6F2FF;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container{
+            width: 70%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border: 3px solid blue;
+            border-radius: 10px;
+        }
+
+        h1{
+            color: darkblue;
+        }
+
+        input{
+            width: 80%;
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid blue;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button{
+            padding: 10px 20px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #result{
+            margin-top: 20px;
+            text-align: left;
+            background: #F5F5F5;
+            padding: 15px;
+            border: 2px solid gray;
+            border-radius: 5px;
+        }
+
+        h2{
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>AI SDLC Generator</h1>
+
+    <h3>Enter Project Topic</h3>
+
+    <input type="text" id="topic" placeholder="Example: Hospital Management">
+
+    <br>
+
+    <button onclick="generate()">Generate SDLC</button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+function generate(){
+
+    var topic = document.getElementById("topic").value;
+
+    if(topic==""){
+        document.getElementById("result").innerHTML =
+        "<h2>Please Enter a Topic</h2>";
+        return;
+    }
+
+    document.getElementById("result").innerHTML =
+
+    "<h2>SDLC for " + topic + "</h2>" +
+
+    "<p><b>1. Planning:</b> Plan the " + topic + " project, budget, and timeline.</p>" +
+
+    "<p><b>2. Requirement Analysis:</b> Collect user requirements for the " + topic + " system.</p>" +
+
+    "<p><b>3. Design:</b> Design the user interface, database, and system architecture.</p>" +
+
+    "<p><b>4. Development:</b> Develop the " + topic + " application using programming and AI tools.</p>" +
+
+    "<p><b>5. Testing:</b> Test the " + topic + " system and fix bugs.</p>" +
+
+    "<p><b>6. Deployment:</b> Deploy the " + topic + " system for users.</p>" +
+
+    "<p><b>7. Maintenance:</b> Update and maintain the " + topic + " system regularly.</p>";
+}
+</script>
+
+</body>
+</html>
