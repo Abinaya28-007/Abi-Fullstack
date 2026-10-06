@@ -1,0 +1,114 @@
+.card {
+  width: 340px;
+  padding: 32px 28px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  margin: -66px auto 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #fff;
+}
+
+.title {
+  margin: 0 0 18px;
+  color: #333;
+}
+
+.row {
+  margin: 8px 0;
+  font-size: 17px;
+  color: #444;
+}
+
+.row span {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.marks-box {
+  margin: 22px 0;
+  padding: 16px;
+  border-radius: 14px;
+  background: #f3f4ff;
+}
+
+.marks-label {
+  display: block;
+  font-size: 14px;
+  color: #777;
+}
+
+.marks-input {
+  width: 110px;
+  margin-top: 4px;
+  border: none;
+  border-bottom: 2px solid #667eea;
+  background: transparent;
+  text-align: center;
+  font-size: 44px;
+  font-weight: 700;
+  color: #333;
+  outline: none;
+}
+
+.marks-input::-webkit-inner-spin-button,
+.marks-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.bar {
+  height: 8px;
+  margin-top: 8px;
+  border-radius: 10px;
+  background: #dde0ff;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.3s ease;
+}
+
+.btn-group {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.inc { background: linear-gradient(135deg, #11998e, #38ef7d); }
+.dec { background: linear-gradient(135deg, #eb3349, #f45c43); }
